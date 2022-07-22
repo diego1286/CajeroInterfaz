@@ -78,6 +78,11 @@ public class Cliente {
     public void setIntentos(int intentos) {
         this.intentos = intentos;
     }
+
+    @Override
+    public String toString() {
+        return "Cliente{" + "id=" + id + ", Nombre=" + Nombre + ", apellido=" + apellido + ", numCard=" + numCard + ", pin=" + pin + ", saldo=" + saldo + ", intentos=" + intentos + '}';
+    }
     
     
     

@@ -1,40 +1,36 @@
-
 package bancoiuds.Proyecto;
 
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
-
-
-
 public class JFPrincipal extends javax.swing.JFrame {
-    static Cliente[] clientesArray={
-    new Cliente(1, "Diego", "Ardila", 111111, 1234, 10000,0),
-        new Cliente(2, "Julio", "Martinez", 12222, 1344, 20000,0),
-        new Cliente(3, "Isabel", "Gomez", 33333, 1264, 60000,0),
-    };
-    static List<Cliente> clientes = Arrays.asList(clientesArray);// se crea la lista para manejar mejor la lista 
-    
-    Cliente cliente; // se crea la variable global
-    
-    int operacion =0;
 
-    
+    static Cliente[] clientesArray = {
+        new Cliente(1, "Diego", "Ardila", 111111, 1234, 10000, 0),
+        new Cliente(2, "Julio", "Martinez", 12222, 1344, 20000, 0),
+        new Cliente(3, "Isabel", "Gomez", 33333, 1264, 60000, 0),};
+    static List<Cliente> clientes = Arrays.asList(clientesArray);// se crea la lista para manejar mejor la lista 
+
+    Cliente cliente; // se crea la variable global
+
+    int operacion = 0;
+
     public JFPrincipal() {
         initComponents();
         cliente = new Cliente();
         this.inicializar();// se llama el metodo en el constructor principal
     }
-    
-    public void inicializar(){
+
+    public void inicializar() {
         jLNombres.setText("");
         jTFValor.setVisible(false);
         this.habilitarTeclado(false);
         this.habilitarOpciones(false);
     }
-    private void habilitarTeclado(boolean flag){
-         jBUno.setVisible(flag);
+
+    private void habilitarTeclado(boolean flag) {
+        jBUno.setVisible(flag);
         jBDos.setVisible(flag);
         jBTres.setVisible(flag);
         jBCuatro.setVisible(flag);
@@ -46,26 +42,24 @@ public class JFPrincipal extends javax.swing.JFrame {
         jBCero.setVisible(flag);
         jBBorrar.setVisible(flag);
         jBAceptar.setVisible(flag);
-        
+
         jPassword.setVisible(flag);
         jLMensajes.setVisible(flag);
     }
-    
-     private void habilitarOpciones(boolean flag){
+
+    private void habilitarOpciones(boolean flag) {
         jBSaldo.setVisible(flag);
         jBRetirar.setVisible(flag);
         jBPin.setVisible(flag);
     }
-    
-    private void habilitarPrint(boolean flag){
-         jLImprimir.setVisible(flag);
+
+    private void habilitarPrint(boolean flag) {
+        jLImprimir.setVisible(flag);
         jBSi.setVisible(flag);
         jBNo.setVisible(flag);
 
-        
     }
 
-   
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -200,36 +194,35 @@ public class JFPrincipal extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jBBorrar)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jBCero, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jBAceptar)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(24, 24, 24)
-                        .addComponent(jBSiete, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap()
+                        .addComponent(jBBorrar, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jBCero, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jBOcho, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jBAceptar, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jBCuatro, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE)
-                            .addComponent(jBUno, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jBDos, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jBCinco, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(jBSeis, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE)
-                        .addComponent(jBNueve, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jBTres, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(38, 38, 38))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jBUno, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jBCuatro, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE))
+                                .addGap(18, 18, 18)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jBCinco, javax.swing.GroupLayout.PREFERRED_SIZE, 42, Short.MAX_VALUE)
+                                    .addComponent(jBDos, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE)))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jBSiete, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jBOcho, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jBSeis, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jBTres, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jBNueve, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -294,35 +287,43 @@ public class JFPrincipal extends javax.swing.JFrame {
         });
 
         jBRetirar.setText("Retirar");
+        jBRetirar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBRetirarActionPerformed(evt);
+            }
+        });
 
         jBPin.setText("Cambiar PIN");
+        jBPin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBPinActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(6, 6, 6)
-                        .addComponent(jBRetirar, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jBSaldo)
                     .addComponent(jBPin))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(0, 61, Short.MAX_VALUE))
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addComponent(jBSaldo)
-                .addGap(0, 18, Short.MAX_VALUE))
+                .addContainerGap()
+                .addComponent(jBRetirar, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(15, 15, 15)
+                .addGap(29, 29, 29)
                 .addComponent(jBSaldo)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jBPin)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jBRetirar)
-                .addContainerGap(66, Short.MAX_VALUE))
+                .addContainerGap(23, Short.MAX_VALUE))
         );
 
         jLImprimir.setText("Imprimir Recibo");
@@ -341,7 +342,7 @@ public class JFPrincipal extends javax.swing.JFrame {
                     .addComponent(jBSi)
                     .addComponent(jBNo)
                     .addComponent(jLImprimir))
-                .addContainerGap(39, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -354,46 +355,47 @@ public class JFPrincipal extends javax.swing.JFrame {
                 .addComponent(jBNo))
         );
 
+        jLNombres.setText("jLabel5");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel1)
-                                .addGap(18, 18, 18)
-                                .addComponent(jLabel2))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jTFNoTarjeta, javax.swing.GroupLayout.PREFERRED_SIZE, 259, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jBIngresarTarjeta, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jLabel1)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel2)
+                        .addGap(87, 87, 87)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(207, 207, 207)
-                                        .addComponent(jLNombre))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jLNombres, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGap(0, 46, Short.MAX_VALUE))))
+                                .addGap(207, 207, 207)
+                                .addComponent(jLNombre)
+                                .addGap(0, 46, Short.MAX_VALUE)))
+                        .addGap(65, 65, 65))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(24, 24, 24)
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(6, 6, 6)
-                                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(65, 65, 65))
+                                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(21, 21, 21)
+                                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jTFNoTarjeta, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jBIngresarTarjeta, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jLNombres, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -412,19 +414,14 @@ public class JFPrincipal extends javax.swing.JFrame {
                     .addComponent(jLNombres))
                 .addGap(26, 26, 26)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap())
-                    .addGroup(layout.createSequentialGroup()
+                        .addGap(6, 6, 6)
                         .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18))))))
+                            .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jPanel4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
         );
 
         pack();
@@ -443,7 +440,7 @@ public class JFPrincipal extends javax.swing.JFrame {
 
     private void jBDosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBDosActionPerformed
         // TODO add your handling code here:
-         setTeclado(2);
+        setTeclado(2);
     }//GEN-LAST:event_jBDosActionPerformed
 
     private void jBTresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBTresActionPerformed
@@ -483,20 +480,118 @@ public class JFPrincipal extends javax.swing.JFrame {
 
     private void jBBorrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBBorrarActionPerformed
         // TODO add your handling code here:
-         retroceso();
+        retroceso();
     }//GEN-LAST:event_jBBorrarActionPerformed
 
     private void jBAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBAceptarActionPerformed
+
         // TODO add your handling code here:
+        switch (operacion) {
+            case 0:// 
+                aceptar();
+                break;
+            case 1:// consulta
+                break;
+            case 2:// retiro
+                jLMensajes.setText("Digita valor $");
+                retirar();
+                break;
+            case 3:
+                cambiarPin();
+                break;
+            case 4:
+                confirmarPin();
+                break;
+            default:
+                aceptar();
+        }
     }//GEN-LAST:event_jBAceptarActionPerformed
 
     private void jBSaldoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBSaldoActionPerformed
         // TODO add your handling code here:
-        operacion= 1;
+        operacion = 1;
         consultarSaldo();
     }//GEN-LAST:event_jBSaldoActionPerformed
 
- private void consultarSaldo(){
+    private void jBRetirarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBRetirarActionPerformed
+
+        operacion = 2;
+        inicializar();
+        habilitarTeclado(true);
+        jPassword.setVisible(false);
+        jTFValor.setVisible(true);
+
+    }//GEN-LAST:event_jBRetirarActionPerformed
+
+    private void jBPinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBPinActionPerformed
+        // TODO add your handling code here:
+        inicializar();
+        habilitarTeclado(true);
+        jPassword.setVisible(false);
+        jLMensajes.setText("Digite pin anterior");
+        operacion = 3;
+
+    }//GEN-LAST:event_jBPinActionPerformed
+
+     private void confirmarPin(){
+        String pass = String.valueOf(jPassword.getPassword());
+        int pin = Integer.parseInt(pass.trim());
+        inicializar();
+        jLMensajes.setVisible(true);
+        jLMensajes.setText("Cambio exitoso");
+        cliente.setPin(pin);
+        clientes.set(cliente.getId() - 1, cliente);
+        habilitarPrint(true);
+    }
+
+    
+    
+    
+    private void cambiarPin() {
+        String pass = String.valueOf(jPassword.getPassword());
+        int pin = Integer.parseInt(pass.trim());
+        if (pin < 4) {
+            jLMensajes.setText("Pin debe tener 4");
+            return;
+        }
+        if (cliente.getPin() != pin) {
+            inicializar();
+            jLMensajes.setText("Pin errado");
+            return;
+        }
+        operacion = 4;
+        jLMensajes.setVisible(true);
+        jLMensajes.setText("Digite nuevo pin");
+        jPassword.setText("");
+    }
+
+    private void retirar() {
+        jLMensajes.setText("Digite valor $");
+        String valor = jTFValor.getText();
+        if (valor.length() == 0) {
+            return;
+        }
+        jTFValor.setVisible(false);
+        double retiro = Double.parseDouble(valor);
+        if (retiro > cliente.getSaldo()) {
+            inicializar();
+            jLMensajes.setVisible(true);
+            jLMensajes.setText("Valor mayor al saldo");
+            jTFValor.setText("");
+            return;
+        }
+        cliente.setSaldo(cliente.getSaldo() - retiro);
+        clientes.set(cliente.getId() - 1, cliente);
+        jTFValor.setText("");
+        inicializar();
+        habilitarPrint(true);
+
+        clientes.stream().forEach(c -> {
+            System.out.println(c);
+        });
+    }
+
+    private void consultarSaldo() {
         inicializar();
         jLMensajes.setText("");
         jLMensajes.setVisible(true);
@@ -504,29 +599,30 @@ public class JFPrincipal extends javax.swing.JFrame {
         habilitarPrint(true);
     }
 
+// ACEPTAR METODO
+    private void aceptar() {
+        String pass = String.valueOf(jPassword.getPassword());
+        if (pass.length() == 0) {
+            jLMensajes.setText("");
+            return;
+        }
+        validar();
+        jPassword.setText("");
+    }
 
-    private void aceptar(){
-     String pass = String.valueOf(jPassword.getPassword());
-     if(pass.length()==0){
-     jLMensajes.setText("");
-     return;
-     }
-     validar();
-     jLMensajes.setText("");
-    }
-    private void validar(){
-    jLMensajes.setVisible(false);
-    if(cliente.getIntentos()>=3){
-    jLMensajes.setText("Tarjeta bloqueada");
-    jLMensajes.setVisible(true);
-    return;
-    }
-    String pass = String.valueOf(jPassword.getPassword());
+    private void validar() {
+        jLMensajes.setVisible(false);
+        if (cliente.getIntentos() >= 3) {
+            jLMensajes.setText("Tarjeta bloqueada");
+            jLMensajes.setVisible(true);
+            return;
+        }
+        String pass = String.valueOf(jPassword.getPassword());
         int pin = Integer.parseInt(pass.trim());
-        if(cliente.getPin() == pin){
+        if (cliente.getPin() == pin) {
             habilitarOpciones(true);
             jLMensajes.setVisible(false);
-        }else{
+        } else {
             jLMensajes.setVisible(true);
             jLMensajes.setText("PIN Inválido!");
             jPassword.setVisible(true);
@@ -539,6 +635,8 @@ public class JFPrincipal extends javax.swing.JFrame {
     private void retroceso(){
         switch(operacion){
             case 0:
+            case 3:
+            case 4:
                 String pass = String.valueOf(jPassword.getPassword());
                 if(pass.length() > 0){
                     pass = pass.substring(0, pass.length() - 1);
@@ -547,68 +645,78 @@ public class JFPrincipal extends javax.swing.JFrame {
                     jPassword.setText("");
                 }
                 break;
-            case 1:
+            case 1:// saldo
                 break;
-            case 2:
+           
+            case 2:// retiro
+            
+                String retiro = jPassword.getText();
+                if(retiro.length() > 0){
+                    retiro = retiro.substring(0, retiro.length() - 1);
+                    jTFValor.setText(retiro);
+                }else{
+                    jTFValor.setText("");
+                }
+                break;
                 
+             default:
+                 
         }
     }
 
-
-   
-    private void setTeclado(int val){
-            /**
-     * 0: buscar
-     * 1: saldo
-     * 2: retiro
-     * 3: cambio pin
-     */
-        switch(operacion){
-            case 0:
+    private void setTeclado(int val) {
+        switch (operacion) {
+            case 0:// validar
                 concatenarPin(val);
                 break;
-            case 1:
+            case 1:// saldo
                 break;
-            case 2:
-                
+            case 2:// retiro
+                concatenarValor(val);
+                break;
+            case 3: // concatenar el pin 
+                concatenarPin(val);
+                break;
+            default:
+                concatenarPin(val);
         }
+
     }
 
-private void concatenarPin(int val){
+    public void concatenarValor(int val) {
+        jTFValor.setText(jTFValor.getText() + val);
+    }
+
+    private void concatenarPin(int val) {
         String pass = String.valueOf(jPassword.getPassword());
-        if(pass.length() < 4){
+        if (pass.length() < 4) {
             jPassword.setText(pass + val);
         }
     }
 
- 
-private void buscar(){
+    private void buscar() {
         operacion = 0;
         jLMensajes.setText("");
         String cardStr = jTFNoTarjeta.getText();
         int card = Integer.parseInt(cardStr.trim());
-        
-        Optional<Cliente> clienteOpt =  clientes.stream()
+
+        Optional<Cliente> clienteOpt = clientes.stream()
                 .filter(c -> c.getNumCard() == card)
                 .findFirst();
         jLMensajes.setVisible(true);
-        if(clienteOpt.isPresent()){
+        if (clienteOpt.isPresent()) {
             jLMensajes.setText("DIGITA PIN");
             this.habilitarTeclado(true);
             jPassword.setVisible(true);
             cliente = clienteOpt.get();
-            jLNombres.setText(cliente.getNombre() +" " + cliente.getApellido());
-        }else{
+            jLNombres.setText(cliente.getNombre() + " " + cliente.getApellido());
+        } else {
             jLMensajes.setText("Tarjeta Erronea!");
         }
     }
 
-
-
-    
-  
     public static void main(String args[]) {
-      
+
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new JFPrincipal().setVisible(true);
